@@ -9,6 +9,10 @@
 
 #include "idea.h"
 
+#ifndef sv_undef
+#define sv_undef PL_sv_undef
+#endif
+
 MODULE = Crypt::IDEA		PACKAGE = Crypt::IDEA		PREFIX = idea_
 
 char *
