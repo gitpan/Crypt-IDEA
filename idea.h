@@ -1,4 +1,4 @@
-#include <machine/types.h>
+#include <sys/types.h>
 
 #define IDEA_KS_SIZE 104
 

@@ -80,3 +80,6 @@ This implementation is copyright Systemics Ltd ( http://www.systemics.com/ ).
 
 The IDEA algorithm is patented in Europe and the United States
 by Ascom-Tech AG.
+
+Module altered on 22 May 1999 to allow functionality with perl -MCPAN,
+Changes by Dave Paris  (edited lib paths).

@@ -5,7 +5,7 @@
 
 #include "idea.h"
 
-#include <machine/endian.h>
+#include <endian.h>
 
 #define KEYS_PER_ROUND	6
 #define ROUNDS			8 
