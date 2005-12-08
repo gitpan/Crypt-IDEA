@@ -68,7 +68,7 @@ where $plaintext and $ciphertext should be of C<blocksize()> bytes.
 
 =head1 SEE ALSO
 
-Crypt::DES
+Crypt::CBC, Crypt::DES, Crypt::Blowfish, Crypt::Rijndael
 
 Bruce Schneier, I<Applied Cryptography>, 1995, Second Edition,
 published by John Wiley & Sons, Inc.
@@ -81,5 +81,4 @@ This implementation is copyright Systemics Ltd ( http://www.systemics.com/ ).
 The IDEA algorithm is patented in Europe and the United States
 by Ascom-Tech AG.
 
-Module altered on 22 May 1999 to allow functionality with perl -MCPAN,
-Changes by Dave Paris  (edited lib paths).
+Module now maintained by Dave Paris <amused@pobox.com>

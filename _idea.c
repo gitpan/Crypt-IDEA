@@ -5,8 +5,6 @@
 
 #include "idea.h"
 
-#include <endian.h>
-
 #define KEYS_PER_ROUND	6
 #define ROUNDS			8 
 #define KEYLEN			(KEYS_PER_ROUND*ROUNDS+4)
