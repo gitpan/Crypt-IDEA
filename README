@@ -1,4 +1,4 @@
-This is Crypt::IDEA version 1.05, an XS-based implementation of the
+This is Crypt::IDEA version 1.06, an XS-based implementation of the
 patent-encumbered IDEA cryptography algorithm.  It's designed
 to take full advantage of Crypt::CBC when desired.  This module builds
 on many plaforms, with a little assistance (although this should be

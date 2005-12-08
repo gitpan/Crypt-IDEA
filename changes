@@ -11,3 +11,8 @@
 	build problems.
 	Tested on OS X 10.4.3, RHES3 x86, Solaris 8/9 SPARC
 	Added improved test suite contributed graciously.
+
+1.06 - Thu 08 Dec 05 18:51:23 UTC
+	changed __sparc to __sun so the module will build
+	on solaris x86.  Thanks to Cory @ Sun for the fixup.
+

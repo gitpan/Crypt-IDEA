@@ -2,7 +2,7 @@
 
 #define IDEA_KS_SIZE 104
 
-#if defined(__osf__) || defined(__sparc)
+#if defined(__osf__) || defined(__sun)
 #include <inttypes.h>
 typedef uint16_t u_int16_t;
 #endif
