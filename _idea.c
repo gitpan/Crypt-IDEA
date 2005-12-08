@@ -5,6 +5,8 @@
 
 #include "idea.h"
 
+#include <netinet/in.h>
+
 #define KEYS_PER_ROUND	6
 #define ROUNDS			8 
 #define KEYLEN			(KEYS_PER_ROUND*ROUNDS+4)
@@ -69,23 +71,18 @@ inv(u_int16_t x)
 /*
  *	Encryption and decryption
  */
+#define stfy(x) #x
+
 void
 idea_crypt(u_int16_t * in, u_int16_t * out, u_int16_t * key)
 {
 	int i = ROUNDS;
 	u_int16_t x0, x1, x2, x3, t0, t1;
 
-	x0 = *(in++);
-	x1 = *(in++);
-	x2 = *(in++);
-	x3 = *(in);
-
-#if (BYTE_ORDER == LITTLE_ENDIAN)
-	x0 = x0 >> 8 | x0 << 8;
-	x1 = x1 >> 8 | x1 << 8;
-	x2 = x2 >> 8 | x2 << 8;
-	x3 = x3 >> 8 | x3 << 8;
-#endif
+	x0 = htons(*(in++));
+	x1 = htons(*(in++));
+	x2 = htons(*(in++));
+	x3 = htons(*(in));
 
 	do {
 		x0 = mul(x0, *(key++));
@@ -112,17 +109,10 @@ idea_crypt(u_int16_t * in, u_int16_t * out, u_int16_t * key)
 	x2 = t0 + *(key++);
 	x3 = mul(x3, *key);
 
-#if (BYTE_ORDER == LITTLE_ENDIAN)
-	x0 = x0 >> 8 | x0 << 8;
-	x1 = x1 >> 8 | x1 << 8;
-	x2 = x2 >> 8 | x2 << 8;
-	x3 = x3 >> 8 | x3 << 8;
-#endif
-
-	*(out++) = x0;
-	*(out++) = x1;
-	*(out++) = x2;
-	*(out) = x3;
+	*(out++) = htons(x0);
+	*(out++) = htons(x1);
+	*(out++) = htons(x2);
+	*(out) = htons(x3);
 }
 
  
@@ -167,13 +157,8 @@ idea_expand_key(u_int16_t * userKey, u_int16_t * key)
 {
 	int i, j;
 
-#if (BYTE_ORDER == LITTLE_ENDIAN)
 	for(i = 0; i < 8; i++)
-		key[i] = userKey[i] << 8 | userKey[i] >> 8;
-#else
-	for(i = 0; i < 8; i++)
-		key[i] = userKey[i];
-#endif
+		key[i] = htons(userKey[i]);
 
 	j = 0;
 	for(; i < KEYLEN; i++)

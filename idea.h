@@ -2,6 +2,10 @@
 
 #define IDEA_KS_SIZE 104
 
+#if defined(__osf__) || defined(__sparc)
+#include <inttypes.h>
+typedef uint16_t u_int16_t;
+#endif
 typedef u_int16_t idea_cblock[4];
 typedef u_int16_t idea_user_key[8];
 typedef u_int16_t idea_ks[52];

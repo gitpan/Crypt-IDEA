@@ -39,7 +39,7 @@ sub test {
 
 	# Decrypt
 	my $d_test = uc unpack("H*", $cipher->decrypt($p_out));
-	is( $d_test,   $in, "(c$case) Test Decription" );
+	is( $d_test,   $in, "(c$case) Test Decryption" );
 }
 
 # Run all test cases

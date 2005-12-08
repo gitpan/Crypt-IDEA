@@ -3,3 +3,11 @@
 	Changed Makefile.PL to get version from IDEA.pm
 	Added README document
 
+1.04 - stillborn.
+
+1.05 - Thu 08 Dec 05 17:34:47 UTC
+	Added patches donated by anonymous RT guest to
+	use htons to remove endian issues and Solaris
+	build problems.
+	Tested on OS X 10.4.3, RHES3 x86, Solaris 8/9 SPARC
+	Added improved test suite contributed graciously.
