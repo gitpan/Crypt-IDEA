@@ -18,6 +18,8 @@ require DynaLoader;
 # Other items we are prepared to export if requested
 @EXPORT_OK =	qw();
 
+$VERSION="1.03";
+
 bootstrap Crypt::IDEA;
 
 

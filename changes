@@ -1,0 +1,5 @@
+1.03 - Thu 08 Dec 05 06:43:31
+	Added $VERSION variable to IDEA.pm
+	Changed Makefile.PL to get version from IDEA.pm
+	Added README document
+

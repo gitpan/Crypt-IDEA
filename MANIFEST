@@ -8,3 +8,6 @@ _idea.c
 idea.h
 test.pl
 typemap
+README
+changes
+META.yml                                 Module meta-data (added by MakeMaker)

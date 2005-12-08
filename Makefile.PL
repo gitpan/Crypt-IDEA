@@ -6,7 +6,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
 	'NAME' => 'Crypt::IDEA',
 	'DISTNAME' => 'Crypt-IDEA',
-	'VERSION' => '1.02',
+	'VERSION_FROM' => 'IDEA.pm',
 	'OBJECT' => 'IDEA.o _idea.o',
 	'dist'   => {COMPRESS=>'gzip', SUFFIX=>'gz'}
 );
