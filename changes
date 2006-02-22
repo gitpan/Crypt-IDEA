@@ -16,3 +16,7 @@
 	changed __sparc to __sun so the module will build
 	on solaris x86.  Thanks to Cory @ Sun for the fixup.
 
+1.07 - Wed 22 Feb 06 08:57:02 UTC
+	added  || defined(__hpux) to idea.h to cope with
+	HPUX 11.11 w/ANSI C compiler per RT ticket 17796
+
