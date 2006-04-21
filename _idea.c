@@ -1,11 +1,18 @@
 /*
  *	Copyright (C) 1995, 1996 Systemics Ltd (http://www.systemics.com/)
  *	All rights reserved.
+ *
+ *	Modifications are Copyright (C) 2000-2006 W3Works, LLC
+ *	All rights reserved - and much gratitude to patch contributors!
  */
 
 #include "idea.h"
 
+#ifdef WIN32
+#include <wininet.h>
+# else
 #include <netinet/in.h>
+# endif
 
 #define KEYS_PER_ROUND	6
 #define ROUNDS			8 

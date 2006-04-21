@@ -20,3 +20,11 @@
 	added  || defined(__hpux) to idea.h to cope with
 	HPUX 11.11 w/ANSI C compiler per RT ticket 17796
 
+1.08 - Fri 21 Apr 06 10:40:52 UTC
+	added  || defined(WIN32) to idea.h
+	added  ifdef for WIN32 to _idea.c
+	Thanks to Carl Franks for the pach contributions
+		per RT ticket 18811
+	Updated README - added additional known-good platforms
+	Updated COPYRIGHT
+ 
