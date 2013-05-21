@@ -23,7 +23,9 @@ bootstrap Crypt::IDEA;
 
 package IDEA;
 
-$VERSION="1.08";
+$VERSION="1.08_001";
+$XS_VERSION = $VERSION;
+$VERSION = eval $VERSION;
 
 use strict;
 use Carp;

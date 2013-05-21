@@ -71,8 +71,7 @@ idea_crypt(input, output, ks)
 			output = sv_newmortal();
 		output_len = 8;
 
-		if (!SvUPGRADE(output, SVt_PV))
-			croak("cannot use output argument as lvalue");
+		(void) SvUPGRADE(output, SVt_PV);
 
 		idea_crypt((u_int16_t *)input, (u_int16_t *)SvGROW(output, output_len), (u_int16_t *)ks);
 
