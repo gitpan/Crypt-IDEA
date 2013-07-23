@@ -27,7 +27,9 @@
 		per RT ticket 18811
 	Updated README - added additional known-good platforms
 	Updated COPYRIGHT
+
+1.09 - Tue 23 Jul '13
+	made SvUPGRADE a statement
+	corrected VERSION statement
+	fixed _idea.c for Strawberry
  
-1.08_001 Mon 20 Apr 2013 21:51:00 MDT
-  - Unauthorized release
-  - Fix Sv_UPGRADE bug so module will install under Perl 5.18.0.

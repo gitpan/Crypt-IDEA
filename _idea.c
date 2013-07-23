@@ -9,6 +9,7 @@
 #include "idea.h"
 
 #ifdef WIN32
+#include <windows.h>
 #include <wininet.h>
 # else
 #include <netinet/in.h>

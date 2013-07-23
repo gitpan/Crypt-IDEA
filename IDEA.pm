@@ -20,12 +20,11 @@ require DynaLoader;
 
 bootstrap Crypt::IDEA;
 
+$VERSION="1.09";
 
 package IDEA;
 
-$VERSION="1.08_001";
-$XS_VERSION = $VERSION;
-$VERSION = eval $VERSION;
+$VERSION="1.09";
 
 use strict;
 use Carp;
